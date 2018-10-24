@@ -7,12 +7,13 @@
 
             <div class="card-body">
 
-                <form role="form" id="contact-form" method="post" action="{{route('contact.store')}}">
+                <form role="form" id="contact-form" method="POST" action="{{route('contact.store')}}">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input name="text" type="name" class="form-control" autocomplete="off" id="Name"
+                                <input name="name" type="text" class="form-control" autocomplete="off" id="Name"
                                        placeholder="Name">
                             </div>
                         </div>
