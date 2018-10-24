@@ -11,15 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->Name('home');
-Route::get('/about', function () {
-    return view('pages.about');
-})->Name('about');
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->Name('contact');
+Route::get('/', 'PagesController@home')->Name('home');
+Route::get('/about', 'PagesController@about')->Name('about');
+Route::get('/contact', 'PagesController@contact')->Name('contact');
 
     /*Route::post('/contact', function () {
     $data= request()->all();
